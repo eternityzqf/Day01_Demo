@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zqf.day01_demo.MainActivity">
+
+    <TextView
+        android:id="@+id/more_process"
+        style="@style/main_show_tv_style"
+        android:text="开启多进程测试" />
+
+    <TextView
+        android:id="@+id/startup_mode"
+        style="@style/main_show_tv_style"
+        android:text="Activity启动模式和任务栈" />
+</LinearLayout>
