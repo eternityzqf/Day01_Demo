@@ -1,6 +1,7 @@
 package com.zqf.day01_demo.startupmode;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -36,9 +37,16 @@ public class FourActivity extends Activity {
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
         LogUtil.logD("Four-->onStart");
+        Intent intent =new Intent();
+        intent.addFlags(Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
     }
 
     @Override
