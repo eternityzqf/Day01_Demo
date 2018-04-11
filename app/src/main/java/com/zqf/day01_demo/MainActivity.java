@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.tencent.bugly.beta.Beta;
 import com.zqf.day01_demo.multiprocess.SecondService;
 import com.zqf.day01_demo.multiprocess.ThirdService;
 import com.zqf.day01_demo.startupmode.FourActivity;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        //参数1：isManual 用户手动点击检查，非用户点击操作请传false
+        //参数2：isSilence 是否显示弹窗等交互，[true:没有弹窗和toast] [false:有弹窗或toast]
+        Beta.checkUpgrade(false, false);
+//        CrashReport.testJavaCrash();
     }
 
     @OnClick({R.id.more_process, R.id.startup_mode})
